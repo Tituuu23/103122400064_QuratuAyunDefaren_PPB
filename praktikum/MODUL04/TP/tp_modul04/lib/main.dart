@@ -10,8 +10,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+        title: 'Flutter Demo',
+        theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+        home: Scaffold(
+            appBar: AppBar(
+                backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                title: Text("HomePage"),
+            ),
+            body: Text(
+                "Hello World",
+                style: TextStyle(color: Color(0xffc30010), fontsize: 100),
+            ),
+        ),
     );
   }
 }
